@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-image: url('image2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-wrap: break-word;
+  height: 100px;
+  text-align: center;
+}
+
+i{
+  color: darkgreen;
+}
+
+.contact-deatails{
+  background-image: url("image2.jpg");
+  opacity: 0.8;
+  color: #3E3E3E;
+}
+
+.details{
+  margin-top: 8%;
+  margin-left: 40%;;
+}
+
+.contact-deatails >  div >i{
+  color: black;
+  background-color: transparent;
+  color: blue;
+}
+
+.contact-deatails > h1{
+  margin-left: 35%;
+  font-size: 2.9rem;
+}
+
+.contact-deatails > p{
+  margin-left: 35%;
+}
+
+.call{
+  display: flex;
+  margin: 5%;
+}
+.call > button{
+  background-color: blue;
+  color: white;
+  font-weight: bolder;
+  border: none;
+}
+.call > div > i{
+  color: white;
+}
+.call > div{
+  margin-left: 70%;
+}
+footer{
+  border: 2px solid #3E3E3E;
+  background-color: #3E3E3E;
+  height: 100px;
+  text-align: center;
+  padding: 50px;
+  color: white;
+}
+.footer > i{
+  background-color: transparent;
+  color: black;
+}
+.questions{
+  margin: 5%;
+}
+
+.plans{
+  margin: 5%;
+}
+
+.plans > h1 {
+  font-style: italic;
+  width: 50%;
+  overflow-wrap: break-word;
+  margin-left: 26%;
+}
+
+.plans > h3 {
+  margin: 5%;
+}
+
+.steps{
+  display: flex;
+  flex-wrap: wrap;
+  gap:5em;
+}
+.step{
+  width: 500px;
+}
+.step > img {
+  max-width: 100%;
+}
+.step > h2{
+  margin: 2%;
+}
+.step > h3 {
+  margin:  2%;
+}
+
+.step > p {
+  margin:  2%;
+  color: #616161;
+}
+
+nav{
+  background-color: #333;
+}
+nav > i{
+  margin-left: 95%;
+  color: black;
+  background-color: transparent;
+}
+
+#x{
+position: absolute;
+margin-left: 90%;
+top: 1%;
+}
+
+.nav{
+  position: fixed;
+  background-color: blue;
+  width:250px;
+  height: 100%;
+  padding-top: 50px;
+  margin-left: 80%;
+  display: none;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+}
+.nav > ul{
+  margin-left: 20px;
+}
+.nav > ul > li{
+  margin: 50px;
+  text-decoration: none;
+}
+.nav >ul >li > a{
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: white;
+}
