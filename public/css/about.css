@@ -35,7 +35,7 @@
   display: flex;
   margin: 5%;
 }
-.call > button{
+.call >a >button{
   background-color: blue;
   color: white;
   font-weight: bolder;
@@ -128,9 +128,275 @@ top: 1%;
   margin: 50px;
   text-decoration: none;
 }
+.nav > ul > li:hover{
+  margin: 50px;
+  text-decoration: none;
+  background-color: lime;
+}
 .nav >ul >li > a{
   text-decoration: none;
   font-weight: bolder;
   font-size: 1.5rem;
   color: white;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  .contact-deatails{
+    background-image: url("image2.jpg");
+    opacity: 0.8;
+    color: #3E3E3E;
+  }
+
+  .details{
+    margin-top: 8%;
+    margin-left: 40%;;
+  }
+
+  .contact-deatails >  div >i{
+    color: black;
+    background-color: transparent;
+    color: blue;
+  }
+
+  .contact-deatails > h1{
+    margin-left: 35%;
+    font-size: 2.9rem;
+  }
+
+  .contact-deatails > p{
+    margin-left: 35%;
+  }
+
+  .call{
+    display: flex;
+    margin: 5%;
+  }
+  .call > button{
+    background-color: blue;
+    position: absolute;
+    height: 5%;
+    color: white;
+    font-weight: bolder;
+    border: none;
+  }
+  .call > div > i{
+    color: white;
+  }
+  .call > div{
+    margin-left: 70%;
+  }
+
+  .about{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    background-color: #333;
+    margin: 3%;
+  }
+
+  .about-image{
+    margin-top: 1%;
+    margin-left: 13%;
+    width: 70%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+  }
+  .about-image > img{
+    max-width: 100%;
+  }
+  .bio{
+    margin-top: 5%;
+    width: 100%;
+    overflow-wrap: break-word;
+  }
+  .bio > p {
+    font-weight: bolder;
+    margin-top: 2%;
+    font-size: 1.3rem;
+    color: white;
+  }
+  .bio > h1{
+    font-weight: bolder;
+    color: darkblue;
+  }
+  .bio > h3{
+    font-weight: bolder;
+    margin-top: 3%;
+    color: lightblue;
+  }
+  nav{
+    background-color: #333;
+  }
+  nav > i{
+    margin-left: 85%;
+    color: black;
+    background-color: transparent;
+  }
+
+  #x{
+  position: absolute;
+  margin-left: 90%;
+  top: 1%;
+  }
+
+  .nav{
+    position: fixed;
+    background-color: blue;
+    width:250px;
+    height: 100%;
+    padding-top: 50px;
+    margin-left: 30%;
+    display: none;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+  }
+  .nav > ul{
+    margin-left: 20px;
+  }
+  .nav > ul > li{
+    margin: 50px;
+    text-decoration: none;
+  }
+  .nav >ul >li > a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+  }
+}
+
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  .contact-deatails{
+    background-image: url("image2.jpg");
+    opacity: 0.8;
+    color: #3E3E3E;
+  }
+
+  .details{
+    margin-top: 8%;
+    margin-left: 40%;;
+  }
+
+  .contact-deatails >  div >i{
+    color: black;
+    background-color: transparent;
+    color: blue;
+  }
+
+  .contact-deatails > h1{
+    margin-left: 35%;
+    font-size: 2.9rem;
+  }
+
+  .contact-deatails > p{
+    margin-left: 35%;
+  }
+
+  .call{
+    display: flex;
+    margin: 5%;
+  }
+  .call > button{
+    background-color: blue;
+    position: absolute;
+    height: 5%;
+    color: white;
+    font-weight: bolder;
+    border: none;
+  }
+  .call > div > i{
+    color: white;
+  }
+  .call > div{
+    margin-left: 70%;
+  }
+
+  .about{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    background-color: #333;
+    margin: 3%;
+  }
+
+  .about-image{
+    margin-top: 1%;
+    margin-left: 13%;
+    width: 70%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+  }
+  .about-image > img{
+    max-width: 100%;
+  }
+  .bio{
+    margin-top: 5%;
+    width: 100%;
+    overflow-wrap: break-word;
+  }
+  .bio > p {
+    font-weight: bolder;
+    margin-top: 2%;
+    font-size: 1.3rem;
+    color: white;
+  }
+  .bio > h1{
+    font-weight: bolder;
+    color: darkblue;
+  }
+  .bio > h3{
+    font-weight: bolder;
+    margin-top: 3%;
+    color: lightblue;
+  }
+  nav{
+    background-color: #333;
+  }
+  nav > i{
+    margin-left: 85%;
+    color: black;
+    background-color: transparent;
+  }
+
+  #x{
+  position: absolute;
+  margin-left: 90%;
+  top: 1%;
+  }
+
+  .nav{
+    position: fixed;
+    background-color: blue;
+    width:250px;
+    height: 100%;
+    padding-top: 50px;
+    margin-left: 57%;
+    display: none;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+  }
+  .nav > ul{
+    margin-left: 20px;
+  }
+  .nav > ul > li{
+    margin: 50px;
+    text-decoration: none;
+  }
+  .nav >ul >li > a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+  }
 }

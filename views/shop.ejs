@@ -17,49 +17,20 @@
       <div class="nav" id="nav">
         <i class="fas fa-times-circle" id="x"></i>
         <ul>
-          <li><a href="home.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="coaching.html">Coaching</a></li>
           <li><a href="contact.html">Contact me</a></li>
-          <li><a href="shop.html">Shop</a></li>
+          <li><a href="/shop">Shop</a></li>
           </ul>
       </div>
     </nav>
 
 
 <div class="shop" id="shop">
-  <div class="items">
-    <img src="Castile-Liquid-Soap-300x300.jpeg" alt="hello" class="item-img">
-    <p class="item-discripion">Organic Castile Soap-Organic Hand Soap-Liquid Soap Pump-Hand Soap-Liquid
-      Soap-Bath and Body Liquid Soap-Shampoo</p>
-    <p class="item-price">10.00</p>
-      <button type="button" class="button">Add to cart</button>
-  </div>
 
-  <div class="items">
-    <img src="Castile-Liquid-Soap-300x300.jpeg" alt="hello" class="item-img">
-    <p class="item-discripion">Organic Foaming Hand Soap-Organic Hand Soap-Liquid Soap Pump-Hand Soap-Liquid Soap</p>
-    <p class="item-price">20.00</p>
-      <button type="button" class="button">Add to cart</button>
-  </div>
-
-  <div class="items">
-    <img src="section-bgimage7-1024x689.jpg" alt="hello" class="item-img">
-    <p class="item-discripion">Organic Castile Soap-Organic Hand Soap-Liquid Soap Pump-Hand Soap-Liquid
-      Soap-Bath and Body Liquid Soap-Shampoo</p>
-    <p class="item-price">10.00</p>
-      <button type="button" class="button">Add to cart</button>
-  </div>
-
-  <div class="items">
-    <img src="Foaming-Hand-Soap-300x300.jpeg" alt="hello" class="item-img">
-    <p class="item-discripion">Organic Castile Soap-Organic Hand Soap-Liquid Soap Pump-Hand Soap-Liquid
-      Soap-Bath and Body Liquid Soap-Shampoo</p>
-    <p class=item-price>10.00</p>
-      <button type="button" class="button">Add to cart</button>
-  </div>
  <% items.products.forEach(function(item){ %>
-  <div class="items">
+  <div class="items" data-item-id="<%= item.id %>">
     <img src="<%= item.img %>" alt="hello" class="item-img">
     <p class="item-discripion"><%= item.discripion %></p>
     <p class="item-price"><%= item.price %></p>
@@ -96,9 +67,12 @@
        </div>
     </div>
     <div class="call">
-  <button type="button" name="button">Free 30 mins call <i class="fas fa-arrow-right"></i></button>
+      <a href="call.html">
+        <button type="button" name="button">Free 30 mins call <i class="fas fa-arrow-right"></i></button>
+      </a>
+
   <div>
-      <i class="fab fa-twitter fa-3x"></i> <i class="fab fa-facebook fa-3x"></i> <i class="fab fa-instagram fa-3x"></i> <i>in</i>
+      <i class="fab fa-twitter fa-3x"></i> <i class="fab fa-facebook fa-3x"></i> <i class="fab fa-instagram fa-3x"></i> <i class="fab fa-linkedin fa-3x"></i>
   </div>
     </div>
 

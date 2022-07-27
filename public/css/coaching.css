@@ -48,7 +48,7 @@ i{
   display: flex;
   margin: 5%;
 }
-.call > button{
+.call >a >button{
   background-color: blue;
   color: white;
   font-weight: bolder;
@@ -146,9 +146,258 @@ top: 1%;
   margin: 50px;
   text-decoration: none;
 }
+
+.nav > ul > li:hover{
+  margin: 50px;
+  text-decoration: none;
+  background-color: lime;
+}
+
 .nav >ul >li > a{
   text-decoration: none;
   font-weight: bolder;
   font-size: 1.5rem;
   color: white;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header{
+    background-image: url('image2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-wrap: break-word;
+    height: 100px;
+    text-align: center;
+  }
+
+  i{
+    color: darkgreen;
+  }
+
+
+  .call{
+    display: flex;
+    margin: 5%;
+  }
+  .call > button{
+    background-color: blue;
+    position: absolute;
+    height: 5%
+    color: white;
+    font-weight: bolder;
+    border: none;
+  }
+  .call > div > i{
+    color: white;
+  }
+  .call > div{
+    margin-left: 70%;
+  }
+
+  .questions{
+    margin: 5%;
+  }
+
+  .plans{
+    margin: 5%;
+  }
+
+  .plans > h1 {
+    font-style: italic;
+    overflow-wrap: break-word;
+  }
+
+  .plans > h3 {
+    margin: 5%;
+  }
+
+  .steps{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5em;
+  }
+  .step{
+    width: 500px;
+  }
+  .step > img {
+    max-width: 100%;
+  }
+  .step > h2{
+    margin: 2%;
+  }
+  .step > h3 {
+    margin:  2%;
+  }
+
+  .step > p {
+    margin:  2%;
+    color: #616161;
+  }
+
+  nav{
+    background-color: #333;
+  }
+  nav > i{
+    margin-left: 85%;
+    color: black;
+    background-color: transparent;
+  }
+
+  #x{
+  position: absolute;
+  margin-left: 90%;
+  top: 1%;
+  }
+
+  .nav{
+    position: fixed;
+    background-color: blue;
+    width:250px;
+    height: 100%;
+    padding-top: 50px;
+    margin-left: 35%;
+    display: none;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+  }
+  .nav > ul{
+    margin-left: 20px;
+  }
+  .nav > ul > li{
+    margin: 50px;
+    text-decoration: none;
+  }
+  .nav >ul >li > a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+  }
+}
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header{
+    background-image: url('image2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-wrap: break-word;
+    height: 100px;
+    text-align: center;
+  }
+
+  i{
+    color: darkgreen;
+  }
+
+
+  .call{
+    display: flex;
+    margin: 5%;
+  }
+  .call > button{
+    background-color: blue;
+    position: absolute;
+    height: 5%
+    color: white;
+    font-weight: bolder;
+    border: none;
+  }
+  .call > div > i{
+    color: white;
+  }
+  .call > div{
+    margin-left: 70%;
+  }
+
+  .questions{
+    margin: 5%;
+  }
+
+  .plans{
+    margin: 5%;
+  }
+
+  .plans > h1 {
+    font-style: italic;
+    overflow-wrap: break-word;
+  }
+
+  .plans > h3 {
+    margin: 5%;
+  }
+
+  .steps{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5em;
+  }
+  .step{
+    width: 500px;
+  }
+  .step > img {
+    max-width: 100%;
+  }
+  .step > h2{
+    margin: 2%;
+  }
+  .step > h3 {
+    margin:  2%;
+  }
+
+  .step > p {
+    margin:  2%;
+    color: #616161;
+  }
+
+  nav{
+    background-color: #333;
+  }
+  nav > i{
+    margin-left: 85%;
+    color: black;
+    background-color: transparent;
+  }
+
+  #x{
+  position: absolute;
+  margin-left: 90%;
+  top: 1%;
+  }
+
+  .nav{
+    position: fixed;
+    background-color: blue;
+    width:250px;
+    height: 100%;
+    padding-top: 50px;
+    margin-left: 55%;
+    display: none;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+  }
+  .nav > ul{
+    margin-left: 20px;
+  }
+  .nav > ul > li{
+    margin: 50px;
+    text-decoration: none;
+  }
+  .nav >ul >li > a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+  }
 }

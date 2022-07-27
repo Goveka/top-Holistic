@@ -96,7 +96,7 @@ let removeFrmCart=document.querySelectorAll('.danger').forEach((item, i) => {
 
     // number of elements in cart
     let numberOfProducts=document.getElementById('numberOfProducts');
-    numberOfProducts.innerText='Number of products'+ ':' + cartItems.childElementCount-1
+    numberOfProducts.innerText='Number of products'+ ':' + numberOfProducts-1
 
   let cartItemsContainer=document.querySelectorAll('.cart-items')[0];
   let cartRows=cartItemsContainer.querySelectorAll('.newRow');
@@ -155,31 +155,10 @@ paypal.Buttons({
 
       createOrder: function(data, actions) {
 
-        return fetch('/createOrder',{
-          method: "POST",
-          headers: {
-            "Content-Type": 'application/json'
-          },
-          body:JSON.stringify({
-            items: [{
-              id: 1,
-              qauntity: 2
-            },
-            {
-              id: 2,
-              quantity:3
-            }
-          ]
-          })
-        }).then(res => {
-          if (res.ok) return res.json()
-          return res.json().then(json => Promise.reject(json))
-        }).then(({ id})=> {
-          return id
-        }).catch(err => {
-          console.error(err.error);
-        })
-
+        return fetch('/api/orders',{
+          method: "POST"
+        }).then(response => response.json())
+        .then(order => order.id)
       },
 
 
@@ -187,9 +166,9 @@ paypal.Buttons({
 
       onApprove: function(data, actions) {
 
-        return fetch(`/createOrder`,{
+        return fetch(`/api/orders/:orderID/capture`,{
           method: "post"
-        }).then(res => res.json()).then(function(orderData) {
+        }).then(response => response.json()).then(function(orderData) {
 
           // Successful capture! For dev/demo purposes:
 
