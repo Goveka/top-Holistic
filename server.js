@@ -1,8 +1,10 @@
- const express = require('express');
+ const express = require("express")
  const app=express();
- const fs = require('fs');
+ const fs = require("fs")
+ const paypal =require("./paypal.js");
+ const port=process.env.PORT || 3011
  //const paypal=require("@paypal/checkout-server-sdk")
- //const fetch = require('node-fetch');
+ //
  //const pay = require("./paypal.js");
  //require('dotenv').config()
 
@@ -12,7 +14,7 @@
 
 
 //middleware
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use(express.json());
 app.set("view engine", "ejs");
 
@@ -23,7 +25,7 @@ app.get('/', (req,res)=>{
 
 app.get('/shop', (req,res)=>{
 
-fs.readFile('products.json',(error, data)=>{
+  readFile('products.json',(error, data)=>{
 
     res.render('shop', {
       items:JSON.parse(data),
@@ -33,17 +35,17 @@ fs.readFile('products.json',(error, data)=>{
 })
 
 
-//app.post("/api/orders", async (req,res)=>{
-//const order = await pay.createOrder();
-//res.json(order);
-//});
+app.post("/api/orders", async (req,res)=>{
+const order = await paypal.createOrder();
+res.json(order);
+});
 
-//app.post("/api/orders/:orderID/capture", async (req,res)=>{
-//  const { orderID}= req.params;
-//  const captureData = await paypal.capturePayments(orderID);
-//  res.json(captureData);
-//})
+app.post("/api/orders/:orderID/capture", async (req,res)=>{
+  const { orderID}= req.params;
+  const captureData = await paypal.capturePayments(orderID);
+  res.json(captureData);
+})
 
- app.listen(3011, ()=>{
+ app.listen(port, ()=>{
    console.log('server is up on port 3011');
  })

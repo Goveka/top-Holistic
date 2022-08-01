@@ -1,11 +1,11 @@
-const fetch = require('node-fetch');
-require("dotenv").config();
+const fetch = require("node-fetch")
+require ("dotenv").config()
 
 const {PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET} = process.env;
  const base="https://api-m.sandbox.paypal.com";
 
 
-async function createOrder () {
+exports.createOrder= async function () {
 
 // body...
 const accessToken = await generateAcessTokenFetch();
@@ -33,7 +33,7 @@ console.log(data);
 return data;
 }
 
-async function capturePayments(orderId) {
+exports.capturePayments= async function(orderId) {
 // body...
 const accessToken = await generateAcessTokenFetch();
 const url=`${base}/v2/checkout/orders/${orderId}/capture`;
@@ -54,16 +54,10 @@ const response= await fetch(base + "/v1/oauth2/token", {
  method: "post",
  body: "grant_type=client_credentials",
  headers: {
-   Authorization: "Basic" + Buffer.from(PAYPAL_CLIENT_ID + ":" + PAYPAL_CLIENT_SECRET).toString("base64"),
+   Authorization:
+   "Basic" + Buffer.from(PAYPAL_CLIENT_ID + ":" + PAYPAL_CLIENT_SECRET).toString("base64"),
  },
 });
 const data = await response.json();
-return data.access_token;
-}
-
-main()
-
-async function main() {
-  let order = await createOrder();
-  capturePayments(order.id)
+return data;
 }

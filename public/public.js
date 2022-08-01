@@ -166,7 +166,7 @@ paypal.Buttons({
 
       onApprove: function(data, actions) {
 
-        return fetch(`/api/orders/:orderID/capture`,{
+        return fetch(`/api/orders/${data.orderID}/capture`,{
           method: "post"
         }).then(response => response.json()).then(function(orderData) {
 
